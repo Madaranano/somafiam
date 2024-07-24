@@ -1126,7 +1126,7 @@
                         <h3>Further Information</h3>
                         <ul class="list-unstyled links">
                             <li><a href="#">Terms &amp; Conditions</a></li>
-                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Privacy Policy .</a></li>
                         </ul>
                     </div>
                     <div class="col-md-3">
