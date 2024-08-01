@@ -14,6 +14,8 @@
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     <link rel="stylesheet" href="fonts/icomoon/style.css">
     <link rel="stylesheet" href="{{ asset('fonts/Armata-Regular/style.css') }}">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
     <title>Robot</title>
 
     <style>
@@ -490,109 +492,7 @@
             }
         }
 
-        /* Container for the list and image */
-        .ul-div {
-            width: 100%;
-            height: 80vh;
-            background-color: #000000;
-            display: flex;
-            justify-content: space-between;
-            /* Space between list and image */
-            align-items: flex-start;
-            padding: 5%;
-            box-sizing: border-box;
-            overflow: hidden;
-        }
 
-        /* Style for the list */
-        .infoList {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
-            width: 60%;
-            /* Adjust width as needed */
-        }
-
-        /* List item styling */
-        li {
-            cursor: pointer;
-            padding: 10px;
-            margin-bottom: 5px;
-            position: relative;
-        }
-
-        /* Heading styling */
-        li h1 {
-            font-size: 40px;
-            color: #6d7870;
-            /* Default color */
-            margin: 0;
-            transition: color 0.3s ease-out;
-            /* Smooth color transition */
-        }
-
-        /* Heading hover effect */
-        li h1:hover {
-            color: #2eff6d;
-            /* Hover color */
-        }
-
-        /* Info div styling */
-        .info {
-            max-height: 0;
-            overflow: hidden;
-            opacity: 0;
-            transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
-            padding: 0 10px;
-            color: #fff;
-            background-color: #000000;
-            margin-left: 5%;
-        }
-
-        /* Show class for info div */
-        .info.show {
-            max-height: 100px;
-            /* Adjust based on content size */
-            opacity: 1;
-            padding: 10px;
-        }
-
-        /* Active class for list item */
-        li.active h1 {
-            color: #2eff6d;
-            /* Color when li is active */
-        }
-
-        /* Image container styling */
-        .image-container {
-            flex-shrink: 0;
-            /* Prevent the image container from shrinking */
-            width: 35%;
-            /* Adjust width as needed */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            overflow: hidden;
-            /* Ensure image doesn't overflow */
-            border-radius: 10px;
-            /* Rounded corners */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            /* Shadow for depth */
-        }
-
-        /* Image styling */
-        #displayImage {
-            max-width: 100%;
-            /* Ensure the image fits within the container */
-            height: auto;
-            /* Maintain aspect ratio */
-            border-radius: 10px;
-            /* Rounded corners */
-            object-fit: cover;
-            /* Cover the container while maintaining aspect ratio */
-            transition: opacity 0.3s ease-out;
-            /* Smooth opacity transition */
-        }
 
         .dsc {
             width: 100%;
@@ -628,7 +528,8 @@
             font-size: 16px;
         }
 
-        .titre {
+        .titre,
+        .realisations {
             width: 100%;
             background-color: #000000;
             color: #fff;
@@ -636,206 +537,58 @@
             display: flex;
             align-items: center;
             justify-content: center;
-
         }
 
-        .titre .h1 {
+        .titre .h1,
+        .realisations .h1 {
             width: 40%;
             position: relative;
             top: -12%;
         }
 
-        .titre .h1 h1 {
+        .titre .h1 h1,
+        .realisations .h1 h1 {
             font-size: 46px;
             line-height: 50px;
             font-weight: 400;
             font-family: "Cairo", sans-serif;
-
-
         }
 
-        .titre .p {
+        .titre .p,
+        .realisations .p {
             width: 40%;
             position: relative;
             left: 60px;
-
         }
 
-        .titre .p p {
+        .titre .p p,
+        .realisations .p p {
             font-size: 16px;
-        }
-
-
-        .bloc-sectors__slider {
-            display: flex;
             position: relative;
-            overflow: hidden
         }
 
-        @media (max-width: 959.98px) {
-            .bloc-sectors__slider {
-                flex-wrap: wrap
-            }
+        .realisations .p {
+            bottom: 2%;
         }
 
-        .bloc-sectors__slider .slide {
-            width: 100%;
-            height: 240px;
+        .titre .p p::after,
+        .realisations .p p::after {
+            content: "";
             display: block;
-            background-size: cover;
-            background-position: 50%;
-            overflow: hidden;
-            transition: width .7s ease, min-width .7s ease;
-            border-top: 0;
-            padding-top: 0;
-            margin-top: 0;
-            color: #fff;
-            min-width: 0
-        }
-
-        @media (min-width: 960px) {
-            .bloc-sectors__slider .slide {
-                width: calc(1/var(--length)*100%);
-                height: 580px
-            }
-
-            .bloc-sectors__slider .slide:hover {
-                width: 100%;
-                min-width: 100%;
-                color: #e21030
-            }
-
-            .bloc-sectors__slider .slide:hover .line {
-                width: 24px
-            }
-        }
-
-        .bloc-sectors__slider .slide__link {
-            background-color: rgba(18, 18, 18, .5);
-            color: #fff;
-            padding: 24px 32px;
-            height: 100%;
-            width: 100%;
-            left: 0;
-            z-index: 2;
-            display: flex;
-            justify-content: flex-start;
-            align-items: flex-start
-        }
-
-        @media (min-width: 960px) {
-            .bloc-sectors__slider .slide__link {
-                width: calc(1/var(--length)*100%);
-                position: absolute
-            }
-        }
-
-        .bloc-sectors__slider .slide__inner {
-            display: flex;
-            width: 100%;
-            height: 100%;
-            flex-direction: column;
-            justify-content: space-between
-        }
-
-        @media (min-width: 960px) and (max-width:1279.98px) {
-            .bloc-sectors__slider .slide__inner__title {
-                font-size: 14px;
-                line-height: 25px;
-                font-weight: 800
-            }
-        }
-
-        .bloc-sectors__slider .slide__inner i {
-            color: #fff;
-            margin-left: auto
-        }
-
-        .bloc-sectors__slider .slide__inner i:before {
-            font-size: 32px;
-            line-height: 32px
-        }
-
-        .bloc-sectors__slider .slide__inner .line {
-            display: block;
-            margin-top: 8px;
-            width: 0;
+            width: 25px;
+            /* Adjust the width as needed */
             height: 2px;
-            transition: all .25s ease-out
-        }
-
-        .bloc-sectors__slider .slide:not(:last-child) .slide__link {
-            border-bottom: 1px solid hsla(0, 0%, 100%, .5)
-        }
-
-        @media (min-width: 960px) {
-            .bloc-sectors__slider .slide:not(:last-child) .slide__link {
-                border-bottom: none;
-                border-right: 1px solid hsla(0, 0%, 100%, .5)
-            }
-        }
-
-        @media (min-width: 960px) {
-            .bloc-sectors__slider .slide:first-child .slide__link {
-                left: 0
-            }
-
-            .bloc-sectors__slider .slide:nth-child(2) .slide__link {
-                left: calc(1/var(--length)*100%)
-            }
-
-            .bloc-sectors__slider .slide:nth-child(3) .slide__link {
-                left: calc(2/var(--length)*100%)
-            }
-
-            .bloc-sectors__slider .slide:nth-child(4) .slide__link {
-                left: calc(3/var(--length)*100%)
-            }
-
-            .bloc-sectors__slider .slide:nth-child(5) .slide__link {
-                left: calc(4/var(--length)*100%)
-            }
-
-            .bloc-sectors__slider .slide:nth-child(6) .slide__link {
-                left: calc(5/var(--length)*100%)
-            }
-        }
-
-        .bloc-sectors.is-sector {
-            padding-top: 40px
-        }
-
-        @media (min-width: 720px) {
-            .bloc-sectors.is-sector {
-                padding-top: 60px
-            }
-        }
-
-        @media (min-width: 1280px) {
-            .bloc-sectors.is-sector {
-                padding-top: 80px
-            }
-        }
-
-        .bloc-sectors.is-sector .headline {
-            margin-bottom: 40px
-        }
-
-        @media (min-width: 720px) {
-            .bloc-sectors.is-sector .headline {
-                margin-bottom: 60px
-            }
-        }
-
-        @media (min-width: 1280px) {
-            .bloc-sectors.is-sector .headline {
-                margin-bottom: 80px
-            }
+            /* Adjust the height as needed */
+            background-color: #02ef55;
+            /* Line color */
+            margin-top: 10px;
+            /* Adjust the spacing between the text and the line */
         }
     </style>
 </head>
 
 <body>
+
     <nav class="navbar navbar-expand-lg top" style="background-color: #eeeeee; height: 90px; ">
         <div class="container">
             <img src="images/bg4XW.png"
@@ -910,7 +663,8 @@
                 </div>
             </div>
             <div class="half2">
-                <p> R&D Technology conçoit et fabrique des équipements <br>de production innovants. Nous développons des
+                <p> SOMAFIAM S.A
+                    conçoit et fabrique des équipements <br>de production innovants. Nous développons des
                     <br>solutions sur-mesure en robotique, machines <br> spéciales, à l’unité ou en série.
                 </p>
             </div>
@@ -932,100 +686,15 @@
             <h1>Nous répondons aux <br>défis techniques des <br>industriels</h1>
         </div>
         <div class="p">
-            <p>Depuis plus de 25 ans, R&D Technology intervient <br>dans de nombreux secteurs industriels pour apporter
+            <p>Depuis plus de 25 ans, SOMAFIAM S.A
+                intervient <br>dans de nombreux secteurs industriels pour apporter
                 <br>des solutions adaptées à leurs besoins techniques, <br>économiques et stratégiques.
             </p>
         </div>
     </div>
 
-    <section class="bloc-sectors">
-        <div class="bloc-sectors__slider">
-            <div class="slide"
-                style="
-                background-image: url({{ asset('images/slide1.jpg') }});
-                --length: 5"
-                js-sector-slide>
-                <a class="slide__link" href="">
-                    <div class="slide__inner">
-                        <h3 class="p p--large slide__inner__title">
-                            <span>Médical</span><br>
-                            <span>Pharmaceutique</span><br>
-                            <span>Medtech</span><br>
-                            <span>Biotech</span><br>
-                            <span>Cosmétique</span><br>
-                            <div class="line" style="background-color:#2A7EE2"></div>
-                        </h3>
-                        <i class="icon icon-arrowright"></i>
-                    </div>
-                </a>
-            </div>
-            <div class="slide"
-                style="
-                background-image: url({{ asset('images/slide2.jpg') }});
-                --length: 5"
-                js-sector-slide>
-                <a class="slide__link" href="">
-                    <div class="slide__inner">
-                        <h3 class="p p--large slide__inner__title">
-                            <span>Agroalimentaire</span><br>
-                            <div class="line" style="background-color:#72af68"></div>
-                        </h3>
-                        <i class="icon icon-arrowright"></i>
-                    </div>
-                </a>
-            </div>
-            <div class="slide"
-                style="
-                background-image: url({{ asset('images/slide3.jpg') }});
-                --length: 5"
-                js-sector-slide>
-                <a class="slide__link" href="">
-                    <div class="slide__inner">
-                        <h3 class="p p--large slide__inner__title">
-                            <span>Automobile</span><br>
-                            <div class="line" style="background-color:#e9702c"></div>
-                        </h3>
-                        <i class="icon icon-arrowright"></i>
-                    </div>
-                </a>
-            </div>
-            <div class="slide"
-                style="
-                background-image: url({{ asset('images/slide4.jpg') }});
-                --length: 5"
-                js-sector-slide>
-                <a class="slide__link" href="">
-                    <div class="slide__inner">
-                        <h3 class="p p--large slide__inner__title">
-                            <span>Electronique</span><br>
-                            <span>Electromécanique</span><br>
-                            <span>Electroménager</span><br>
-                            <div class="line" style="background-color:#edbd42"></div>
-                        </h3>
-                        <i class="icon icon-arrowright"></i>
-                    </div>
-                </a>
-            </div>
-            <div class="slide"
-                style="
-                background-image: url({{ asset('images/slide5.jpg') }});
-                --length: 5"
-                js-sector-slide>
-                <a class="slide__link" href="">
-                    <div class="slide__inner">
-                        <h3 class="p p--large slide__inner__title">
-                            <span>Mécanique</span><br>
-                            <span>Energie</span><br>
-                            <span>Plasturgie</span><br>
-                            <span>Biens de consommation</span><br>
-                            <div class="line" style="background-color:#e21030"></div>
-                        </h3>
-                        <i class="icon icon-arrowright"></i>
-                    </div>
-                </a>
-            </div>
-        </div>
-    </section>
+    @include('slider')
+
 
 
     <div class="titre">
@@ -1044,126 +713,25 @@
     </div>
 
 
-    <div class="ul-div">
-        <ul id="infoList">
-            <li data-image="{{ asset('images/liste1.jpg') }}">
-                <h1>Projets technologiques innovants</h1>
-                <div class="info">Partenaire industriel des innovateurs, R&D Technology vous accompagne de l’idée à
-                    la
-                    fabrication en série d’équipements.</div>
-            </li>
-            <li data-image="{{ asset('images/liste2.jpg') }}">
-                <h1>Fabrication d'équipements en série</h1>
-                <div class="info">L’efficience industrielle est notre métier, nous nous chargeons de la fabrication
-                    en
-                    série des équipements destinés à vos clients.</div>
-            </li>
-            <li data-image="{{ asset('images/liste3.jpg') }}">
-                <h1>Robotisation - Cobotisation</h1>
-                <div class="info">Fort d’un savoir-faire reconnu en intégration robotique multimarque, R&D Technology
-                    conçoit et réalise des cellules robotisées ou collaboratives.</div>
-            </li>
-            <li data-image="{{ asset('images/liste4.jpg') }}">
-                <h1>Cellule d’assemblage flexible</h1>
-                <div class="info">Résultat d’un défi technologique, nos Evolubox® ouvrent une nouvelle voie dans
-                    l’automatisation des petites et moyennes séries.</div>
-            </li>
-            <li data-image="{{ asset('images/liste5.jpg') }}">
-                <h1>Machine spéciale de production sur-mesure</h1>
-                <div class="info">Passionnés par la technologie, nous concevons et réalisons des équipements de
-                    pointe
-                    et machines spéciales, partout où les solutions standards ne conviennent pas.</div>
-            </li>
-        </ul>
-        <div class="image-container">
-            <img id="displayImage" src="{{ asset('images/liste1.jpg') }}" alt="Displayed Image">
+    @include('liste')
+
+    <div class="realisations">
+        <div class="h1">
+            <h1>Nos réalisations</h1>
+        </div>
+        <div class="p">
+            <p>À travers nos dernières réalisations, découvrez <br>comment nos solutions ont permis d’industrialiser de
+                <br>nouveaux produits ou d’optimiser des processus de <br>fabrication existants.
+            </p>
+
         </div>
     </div>
 
 
+    @include('footer')
 
 
-    <footer class="footer-20192" style="margin-top: 200px">
-        <div class="site-section">
-            <div class="container">
 
-                <div class="cta d-block d-md-flex align-items-center px-5" style="background-color: #3c863e">
-                    <div>
-                        <h2 class="mb-0">Ready for a next project?</h2>
-                        <h3 class="text-dark">Let's get started!</h3>
-                    </div>
-                    <div class="ml-auto">
-                        <a href="#" class="btn btn-dark rounded-0 py-3 px-5"
-                            style="position: relative;right: -475px;">Contact
-                            nous</a>
-                    </div>
-                </div>
-                <div class="row">
-
-                    <div class="col-sm">
-                        <a href="#" class="footer-logo">SOMA</a><a href="#" class="footer-logo"
-                            style="color: #2a9249">FIAN</a>
-                        <p class="copyright">
-                            <small>&copy; 2024</small>
-                        </p>
-                    </div>
-                    <div class="col-sm">
-                        <h3>Customers</h3>
-                        <ul class="list-unstyled links">
-                            <li><a href="#">Buyer</a></li>
-                            <li><a href="#">Supplier</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-sm">
-                        <h3>Company</h3>
-                        <ul class="list-unstyled links">
-                            <li><a href="#">About us</a></li>
-                            <li><a href="#">Careers</a></li>
-                            <li><a href="#">Contact us</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-sm">
-                        <h3>Further Information</h3>
-                        <ul class="list-unstyled links">
-                            <li><a href="#">Terms &amp; Conditions</a></li>
-                            <li><a href="#">Privacy Policy .</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-md-3">
-                        <h3>Follow us</h3>
-                        <ul class="list-unstyled social">
-                            <li>
-                                <a href="#" style="background-color: #3c863e">
-                                    <span class="icon-facebook"></span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" style="background-color: #3c863e">
-                                    <span class="icon-twitter"></span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" style="background-color: #3c863e">
-                                    <span class="icon-linkedin"></span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" style="background-color: #3c863e">
-                                    <span class="icon-medium"></span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" style="background-color: #3c863e">
-                                    <span class="icon-paper-plane"></span>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </footer>
 
 
     <script>
@@ -1192,6 +760,7 @@
             });
         });
     </script>
+
 </body>
 
 </html>
