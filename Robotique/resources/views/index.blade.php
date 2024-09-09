@@ -571,71 +571,29 @@
             bottom: 2%;
         }
 
-        .titre .p p::after,
+        /* .titre .p p::after,
         .realisations .p p::after {
             content: "";
             display: block;
             width: 25px;
             /* Adjust the width as needed */
-            height: 2px;
-            /* Adjust the height as needed */
-            background-color: #02ef55;
-            /* Line color */
-            margin-top: 10px;
-            /* Adjust the spacing between the text and the line */
+        height: 2px;
+        /* Adjust the height as needed */
+        background-color: #02ef55;
+        /* Line color */
+        margin-top: 10px;
+        /* Adjust the spacing between the text and the line */
         }
+
+        */
+        /* Heading hover effect */
     </style>
 </head>
 
 <body>
 
-    <nav class="navbar navbar-expand-lg top" style="background-color: #eeeeee; height: 90px; ">
-        <div class="container">
-            <img src="images/bg4XW.png"
-                style="height: 151px; width: 158px;position: relative;left: -117.5px;z-index: 1">
-            <div class="navbar-light">
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-            </div>
-            <div class="collapse navbar-collapse" id="navbarNav" style="position: relative;left: -177.5px;">
-                {{-- <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <button class="btn btn-link" onclick="location.href='#'">
-                            <i class="fab fa-youtube"></i> <!-- Replace with your icon -->
-                        </button>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#"><i class="fab fa-facebook-f"></i></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#"><i class="fab fa-instagram"></i></a>
-                    </li>
-                </ul> --}}
-                <center>
-                    <a class="navbar-brand" href="#">
-                        <img src="images/logo.png" style="height: 85px; width: 110px;position: relative;right: -130%"
-                            alt="SOMAFIAM.SA">
-                    </a>
-                    {{-- <span style="color: #222831;font-size: 35px;font-weight: 400;font-family: Rubik;position: relative;top: 7.5px;left: 177.5px"></span> --}}
-                    <span
-                        style="color: #2a9249;font-size: 35px;font-weight: 600;font-family: Rubik;position: relative;top: 7.5px;right: -125%">SOMAFIAM
-                        S.A</span>
-                </center>
-                {{-- <ul class="navbar-nav">
-                    <li class="nav-item" style="position: relative;left: 425px">
-                        {{-- <button class="btn btn-success"> <a class="nav-link" href="#"> Contacter nous
-                            </a></button> 
-                <button type="button" class="btn btn-success">
-                    <a class="nav-link" href="#" style="color: #eeeeee"> Contacter nous </a>
-                </button>
-                </li>
-                </ul> --}}
-            </div>
-            <img src="images/bg4XM.png" style="height: 151px; width: 158px;position: relative;left: 117.5px;z-index: 1">
-        </div>
-    </nav>
+    @include('nav')
+
     <div class="container-custom">
         <video autoplay loop muted playsinline class="vd">
             <source src="{{ asset('videos/video.mp4') }}" type="video/mp4">
@@ -643,9 +601,9 @@
 
         <div class="content">
             <div class="half1">
-                <h1>Concrétisons ensemble l’industrie du <span style="color: rgb(28, 253, 28)">futur</span> </h1>
+                <h1>Concrétisons ensemble l’industrie du <span style="color:#2A7EE2">futur</span> </h1>
                 <div class="cont">
-                    <h4>vous avez un <span style="color: rgb(28, 253, 28)">projet</span> ?</h4>
+                    <h4>vous avez un <span style="color: #2A7EE2">projet</span> ?</h4>
                     {{-- <a href="#secteur">contactez-nous</a> --}}
                     <button>
                         <span>Contactez-nous</span>
@@ -715,7 +673,7 @@
 
     @include('liste')
 
-    <div class="realisations">
+    {{-- <div class="realisations">
         <div class="h1">
             <h1>Nos réalisations</h1>
         </div>
@@ -725,7 +683,7 @@
             </p>
 
         </div>
-    </div>
+    </div> --}}
 
 
     @include('footer')
@@ -734,32 +692,7 @@
 
 
 
-    <script>
-        document.querySelectorAll('#infoList > li').forEach(item => {
-            const h1 = item.querySelector('h1');
-            const infoDiv = item.querySelector('.info');
-            const imageSrc = item.getAttribute('data-image'); // Get image path from data attribute
 
-            item.addEventListener('click', function() {
-                const isOpen = infoDiv.classList.contains('show');
-
-                // Remove 'active' class from all items
-                document.querySelectorAll('#infoList > li').forEach(li => {
-                    li.classList.remove('active');
-                    li.querySelector('.info').classList.remove('show');
-                });
-
-                // Update the image src
-                document.getElementById('displayImage').src = imageSrc;
-
-                // Toggle the clicked item
-                if (!isOpen) {
-                    item.classList.add('active');
-                    infoDiv.classList.add('show');
-                }
-            });
-        });
-    </script>
 
 </body>
 

@@ -48,10 +48,15 @@
             /* Smooth color transition */
         }
 
-        /* Heading hover effect */
         .li h1:hover {
-            color: #2eff6d;
+            color: #2A7EE2;
             /* Hover color */
+        }
+
+        /* Active class for list item */
+        .li.active h1 {
+            color: #2A7EE2;
+            /* Color when li is active */
         }
 
         /* Info div styling */
@@ -74,11 +79,6 @@
             padding: 10px;
         }
 
-        /* Active class for list item */
-        .li.active h1 {
-            color: #2eff6d;
-            /* Color when li is active */
-        }
 
         /* Image container styling */
         .image-container {

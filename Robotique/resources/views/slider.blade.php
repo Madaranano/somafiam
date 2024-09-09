@@ -203,7 +203,7 @@
                 background-image: url({{ asset('images/slide2.jpg') }});
                 --length: 5"
                 js-sector-slide>
-                <a class="slide__link" href="">
+                <a class="slide__link" href="{{ route('agroalimentaire') }}">
                     <div class="slide__inner">
                         <h3 class="p p--large slide__inner__title">
                             <span>Agroalimentaire</span><br>
@@ -218,7 +218,7 @@
                 background-image: url({{ asset('images/slide3.jpg') }});
                 --length: 5"
                 js-sector-slide>
-                <a class="slide__link" href="">
+                <a class="slide__link" href="{{ route('automobile') }}">
                     <div class="slide__inner">
                         <h3 class="p p--large slide__inner__title">
                             <span>Automobile</span><br>
@@ -233,7 +233,7 @@
                 background-image: url({{ asset('images/slide4.jpg') }});
                 --length: 5"
                 js-sector-slide>
-                <a class="slide__link" href="">
+                <a class="slide__link" href="{{ route('electronique-electromecanique-electromenager') }}">
                     <div class="slide__inner">
                         <h3 class="p p--large slide__inner__title">
                             <span>Electronique</span><br>
@@ -250,7 +250,7 @@
                 background-image: url({{ asset('images/slide5.jpg') }});
                 --length: 5"
                 js-sector-slide>
-                <a class="slide__link" href="">
+                <a class="slide__link" href="{{ route('mecanique-energie-plasturgie-biens-de-consommation') }}">
                     <div class="slide__inner">
                         <h3 class="p p--large slide__inner__title">
                             <span>Mécanique</span><br>

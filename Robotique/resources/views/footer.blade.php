@@ -20,11 +20,11 @@
 
 <body>
 
-    <footer class="footer-20192" style="margin-top: 200px">
+    <footer class="footer-20192" style="background-color: #162135; margin-top: 70px">
         <div class="site-section">
             <div class="container">
 
-                <div class="cta d-block d-md-flex align-items-center px-5" style="background-color: #3c863e">
+                <div class="cta d-block d-md-flex align-items-center px-5" style="background-color: rgb(90, 144, 189)">
                     <div>
                         <h2 class="mb-0">Ready for a next project?</h2>
                         <h3 class="text-dark">Let's get started!</h3>
@@ -38,8 +38,8 @@
                 <div class="row">
 
                     <div class="col-sm">
-                        <a href="#" class="footer-logo">SOMA</a><a href="#" class="footer-logo"
-                            style="color: #2a9249">FIAN</a>
+                        <a href="#" class="footer-logo" style="text-decoration: none">SOMA</a><a href="#"
+                            class="footer-logo" style="color: rgb(6, 138, 219);text-decoration: none">FIAM</a>
                         <p class="copyright">
                             <small>&copy; 2024</small>
                         </p>
@@ -63,34 +63,34 @@
                         <h3>Further Information</h3>
                         <ul class="list-unstyled links">
                             <li><a href="#">Terms &amp; Conditions</a></li>
-                            <li><a href="#">Privacy Policy .</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
                         </ul>
                     </div>
                     <div class="col-md-3">
                         <h3>Follow us</h3>
                         <ul class="list-unstyled social">
                             <li>
-                                <a href="#" style="background-color: #3c863e">
+                                <a href="#" style="background-color: rgb(6, 138, 219)">
                                     <span class="icon-facebook"></span>
                                 </a>
                             </li>
                             <li>
-                                <a href="#" style="background-color: #3c863e">
+                                <a href="#" style="background-color: rgb(6, 138, 219)">
                                     <span class="icon-twitter"></span>
                                 </a>
                             </li>
                             <li>
-                                <a href="#" style="background-color: #3c863e">
+                                <a href="#" style="background-color: rgb(6, 138, 219)">
                                     <span class="icon-linkedin"></span>
                                 </a>
                             </li>
                             <li>
-                                <a href="#" style="background-color: #3c863e">
+                                <a href="#" style="background-color: rgb(6, 138, 219)">
                                     <span class="icon-medium"></span>
                                 </a>
                             </li>
                             <li>
-                                <a href="#" style="background-color: #3c863e">
+                                <a href="#" style="background-color: rgb(6, 138, 219)">
                                     <span class="icon-paper-plane"></span>
                                 </a>
                             </li>

@@ -23,8 +23,6 @@
             box-sizing: border-box;
         }
 
-
-
         .container-custom {
             width: 100%;
             height: 80vh;
@@ -36,8 +34,6 @@
             justify-content: center;
         }
 
-
-
         .content1 {
             position: relative;
             z-index: 1;
@@ -47,14 +43,11 @@
             display: flex;
         }
 
-
-
         .cont a {
             position: absolute;
             right: 50%;
             bottom: 15%;
             font-size: 23px;
-
             color: #fff;
             text-decoration: none;
             border: 2px solid #fff;
@@ -71,7 +64,6 @@
         .half1 {
             width: 45%;
             text-align: left;
-
             height: 80vh;
             position: relative;
             background-color: rgba(0, 0, 0, 0.7);
@@ -93,22 +85,21 @@
             font-size: 35px;
             font-weight: 400;
             margin-left: 15%;
-
             margin-bottom: 22%;
         }
 
         .half2 {
-            width: 45%;
+            width: 35%;
             height: 80vh;
             text-align: left;
             position: relative;
             color: white;
         }
 
-        .half2 p {
-            margin-top: 23%;
+        .half2 .p1 {
             margin-left: 90px;
             font-size: 20px;
+            margin-top: 30%;
         }
 
         .img {
@@ -120,7 +111,6 @@
             transform: translate(-50%, -50%);
             object-fit: cover;
             z-index: -1;
-
         }
 
         button {
@@ -138,6 +128,7 @@
             left: 15%;
             bottom: 15%;
             font-size: 17px;
+            margin-top: 80px;
         }
 
         button:hover {
@@ -162,13 +153,10 @@
             width: 100%;
             height: 50vh;
             display: flex;
-            /* align-items: center; */
             justify-content: space-around;
             margin-top: 40px;
             padding: 40px 0px;
             font-family: "Heebo", sans-serif;
-
-
         }
 
         .dsc .h1 {
@@ -180,17 +168,14 @@
             line-height: 50px;
             font-weight: 400;
             font-family: "Cairo", sans-serif;
-
-
         }
 
         .dsc .p {
-            width: 40%;
+            width: 29%;
             position: relative;
-            left: 60px;
+            left: -60px;
             bottom: 4%;
             color: #676767;
-
         }
 
         .dsc .p p {
@@ -198,14 +183,6 @@
             font-size: 18px;
             line-height: 26px;
         }
-
-
-
-
-
-
-
-
 
 
 
@@ -223,22 +200,20 @@
             background-color: #2A7EE2;
             color: white;
             padding: 40px;
-
             width: 50%;
             height: 100%;
             position: absolute;
             left: 120px;
+            bottom: 20px;
             box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
         }
-
-
 
         .content h1 {
             margin-bottom: 20px;
             font-size: 35px;
             font-family: "Cairo", sans-serif;
             font-weight: 400;
-            margin-left: 50px
+            margin-left: 50px;
         }
 
         .content ul {
@@ -249,7 +224,7 @@
 
         .content ul li {
             margin-bottom: 10px;
-            font-size: 20px;
+            font-size: 18px;
             padding-left: 40px;
             position: relative;
             padding: 16px 0 16px 40px;
@@ -275,25 +250,19 @@
             bottom: 120px;
             right: 3px;
             z-index: -1;
-            background: url('{{ asset('images/slide63.jpg') }}') no-repeat center center/cover;
+            background: url('{{ asset('images/slide65.jpg') }}') no-repeat center center/cover;
         }
-
 
         .dsc2 {
             width: 100%;
             height: 100vh;
             display: flex;
-            /* align-items: center; */
             justify-content: space-around;
             margin-top: 40px;
             padding: 40px 0px;
             font-family: "Heebo", sans-serif;
             background-color: #000000;
-
-
         }
-
-
 
         .dsc2 .h1 h1 {
             font-size: 46px;
@@ -301,35 +270,31 @@
             margin-bottom: 40px;
             font-weight: 400;
             font-family: "Cairo", sans-serif;
-
-
         }
 
         .dsc2 .p {
             width: 40%;
             left: 60px;
-            bottom: 4%;
+            bottom: 9%;
             color: #ffffff;
             margin-top: 5%;
             position: relative;
-
-
         }
 
         .dsc2 .p p {
             font-size: 16px;
             font-size: 18px;
             line-height: 26px;
-            margin-bottom: 40px
+            margin-bottom: 40px;
         }
 
         .image2 {
             width: 35%;
-            height: 85%;
-            margin-top: 5%;
+            height: 95%;
+            margin-top: 2%;
             bottom: 120px;
             right: 3px;
-            background: url('{{ asset('images/img.jpg') }}') no-repeat center center/cover;
+            background: url('{{ asset('images/img3.jpg') }}') no-repeat center center/cover;
         }
 
         .button {
@@ -345,7 +310,7 @@
             font-size: 15px;
             position: absolute;
             left: -0.3%;
-            bottom: -19px;
+            bottom: 20px;
             font-size: 17px;
         }
 
@@ -387,7 +352,6 @@
         .h4 h4,
         .h5 h5 {
             position: absolute;
-
             color: #fff;
             bottom: 0%;
             margin-left: 5%;
@@ -400,30 +364,142 @@
         .h4 h4 {
             font-size: 25px;
             bottom: 0%;
-
-
         }
 
         .h5 h5 {
             font-size: 25px;
             bottom: 60%;
+        }
 
+        /* Media Queries */
+        @media (max-width: 1200px) {
 
+            .half1,
+            .half2 {
+                width: 50%;
+            }
+
+            .content {
+                width: 70%;
+                left: 50px;
+            }
+        }
+
+        @media (max-width: 992px) {
+
+            .half1,
+            .half2 {
+                width: 100%;
+                height: auto;
+            }
+
+            .content {
+                width: 80%;
+                padding: 20px;
+                left: 20px;
+            }
+
+            .image {
+                display: none;
+            }
+
+            .image2 {
+                display: none;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .half1 h1 {
+                font-size: 30px;
+                margin-left: 5%;
+            }
+
+            .half1 h4 {
+                font-size: 25px;
+                margin-left: 10%;
+            }
+
+            .half2 .p1 {
+                margin-left: 20px;
+                font-size: 16px;
+            }
+
+            .content h1 {
+                font-size: 25px;
+                margin-left: 20px;
+            }
+
+            .content ul li {
+                font-size: 16px;
+                padding-left: 20px;
+                padding: 10px 0 10px 20px;
+            }
+
+            button {
+                font-size: 14px;
+                left: 10%;
+            }
+
+            .button {
+                font-size: 14px;
+                left: 0;
+            }
+
+            .dsc .h1 h1,
+            .dsc2 .h1 h1 {
+                font-size: 30px;
+            }
+
+            .dsc .p p,
+            .dsc2 .p p {
+                font-size: 14px;
+            }
+
+            .cont a {
+                font-size: 18px;
+                padding: 10px;
+            }
+        }
+
+        @media (max-width: 576px) {
+
+            .half1 h1,
+            .half1 h4,
+            .half2 .p1,
+            .content h1,
+            .content ul li,
+            .dsc .h1 h1,
+            .dsc2 .h1 h1,
+            .dsc .p p,
+            .dsc2 .p p,
+            .cont a,
+            button,
+            .button {
+                font-size: 12px;
+            }
+
+            .content {
+                width: 100%;
+                padding: 10px;
+                left: 10px;
+            }
         }
     </style>
-    <title>MedicalMédical Pharmaceutique Medtech Biotech Cosmétique</title>
+    <title>automobile</title>
 </head>
 
 <body>
     @include('nav')
 
     <div class="container-custom">
-        <img src="{{ asset('images/slide1.jpg') }}" alt="" class="img">
+        <img src="{{ asset('images/slide3.jpg') }}" alt="" class="img">
 
         <div class="content1">
             <div class="half1">
-                <h1>Concevoir et fabriquer des produits innovants pour <span style="color: #2A7EE2">l’industrie
-                        médicale & cosmétique</span></h1>
+                <h1>
+
+                    La performance industrielle pour<span style="color: #2A7EE2"> la filière automobile</span>
+                </h1>
                 <div class="cont">
                     <h4>vous avez un <span style="color: #2A7EE2">projet</span> ?</h4>
                     <button>
@@ -439,27 +515,26 @@
                 </div>
             </div>
             <div class="half2">
-                <p> SOMAFIAM S.A
-                    accompagne les industriels du secteur médical, pharmaceutique, biotech, medtech et
-                    cosmétique dans leurs projets d’industrialisation, d’optimisation des process et de développement
-                    d’équipements innovants.</p>
+                <p class="p1"> SOMAFIAM S.A
+                    accompagne les équipementiers et sous-traitants automobiles pour industrialiser de nouveaux produits
+                    et optimiser des process existants.</p>
+
             </div>
         </div>
     </div>
 
     <div class="dsc">
         <div class="h1">
-            <h1>Des machines destinées aux salles blanches</h1>
+            <h1>Un domaine industriel en pleine mutation</h1>
         </div>
         <div class="p">
-            <p>La fabrication de produits dans l’industrie de la santé implique l’utilisation d’équipements de
-                production adaptés à un environnement propre. Chaque équipement est conçu spécifiquement en fonction de
-                la classe ISO de la salle blanche dans laquelle il sera installé.</p>
-            <p><span style="font-weight: 600;color: #000000;">Pensées, conçues et fabriquées différemment</span> pour
-                répondre aux exigences de ce secteur d’activité, ces machines de production nécessitent un réel
-                savoir-faire. Fort d’une expérience de plus de 20 ans dans le domaine, SOMAFIAM S.A
-                est reconnu pour
-                son expertise.</p>
+            <p> L’industrie automobile fait face à des révolutions liées au changement de mode de propulsion, au
+                numérique avec le développement de véhicules intelligents et à de nouveaux usages..</p>
+            <p><span style="font-weight: 600;color: #000000;">Ces nombreux challenges conduisent les acteurs de
+                    l’industrie auto</span>
+                à se réinventer en transformant leur technique de production et d’assemblage. Un défi auquel prend part
+                R&D Technology grâce à ses solutions de machines spéciales et robotiques industrielles dédiées au
+                secteur automobile.</p>
         </div>
     </div>
 
@@ -469,11 +544,12 @@
                 <h1>Notre équipe relève vos défis</h1>
                 <ul>
                     <li>Confiez-nous le développement de vos machines de production</li>
-                    <li>Concrétisez vos projets de mise sur le marché d’équipements innovants</li>
                     <li>Optimisez vos process existants</li>
                     <li>Renforcez vos capacités de production</li>
-                    <li>Gagnez en agilité grâce à des équipements de production multi-produits</li>
+                    <li>Continuez de produire vos pièces de rechange avec un équipement multi-produits</li>
                     <li>Modernisez votre parc machines pour en faire un levier de compétitivité</li>
+                    <li>Augmentez la fiabilité et la disponibilité de vos équipements</li>
+                    <li>Re-localisez vos moyennes séries grâce aux cellules d’assemblage flexible</li>
                     <li>Profitez de notre expertise Conseil</li>
                 </ul>
             </div>
@@ -486,15 +562,14 @@
 
         <div class="p">
             <div class="h1">
-                <h1>Accompagner l’innovation médicale</h1>
+                <h1>L’automatisation pour répondre aux enjeux de la filière</h1>
             </div>
-            <p>Décrits comme de réels “architectes de l’industrialisation” par nos clients, nous sommes en mesure de
-                concevoir et de fabriquer vos équipements de production tout en réduisant vos délais de mise sur le
-                marché. Pour cela, nous nous appuyons sur notre savoir-faire, mais aussi notre méthode de gestion de
-                projets et notre vaste réseau de partenaires.</p>
-            <p>Conscient des nombreuses phases de validation nécessaires et de la complexité croissante des produits de
-                la santé, notre mission consiste à vous accompagner dans vos projets les plus ambitieux et de vous faire
-                gagner en agilité.</p>
+            <p>SOMAFIAM S.A développe des outils de production pour assurer efficience et agilité dans vos process.</p>
+            <p>Membre du pôle véhicule du futur, nous accompagnons nos clients vers la performance industrielle.
+                Conscient de l’importance des taux de disponibilité des équipements, des exigences de qualité, du
+                redesign régulier et de la personnalisation des véhicules, nous vous proposons des solutions adaptées à
+                vos besoins industriels.</p>
+
             <div class="cont cont2">
                 <h4>vous avez un <span style="color: #2A7EE2">projet</span> ?</h4>
                 <button class="button">

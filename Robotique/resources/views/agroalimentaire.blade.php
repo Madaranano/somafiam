@@ -98,17 +98,27 @@
         }
 
         .half2 {
-            width: 45%;
+            width: 35%;
             height: 80vh;
             text-align: left;
             position: relative;
             color: white;
         }
 
-        .half2 p {
-            margin-top: 23%;
+        .half2 .p1,
+        .half2 .p2 {
             margin-left: 90px;
             font-size: 20px;
+        }
+
+        .half2 .p1 {
+            margin-top: 23%;
+
+        }
+
+        .half2 .p2 {
+            margin-top: 5%;
+
         }
 
         .img {
@@ -138,6 +148,7 @@
             left: 15%;
             bottom: 15%;
             font-size: 17px;
+            margin-top: 80px;
         }
 
         button:hover {
@@ -185,9 +196,9 @@
         }
 
         .dsc .p {
-            width: 40%;
+            width: 29%;
             position: relative;
-            left: 60px;
+            left: -60px;
             bottom: 4%;
             color: #676767;
 
@@ -209,10 +220,11 @@
 
 
 
+
         .container9 {
             display: flex;
             align-items: center;
-            height: 100vh;
+            height: 111vh;
             margin-top: 10%;
             position: relative;
         }
@@ -228,6 +240,7 @@
             height: 100%;
             position: absolute;
             left: 120px;
+            bottom: 40px;
             box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
         }
 
@@ -249,7 +262,7 @@
 
         .content ul li {
             margin-bottom: 10px;
-            font-size: 20px;
+            font-size: 18px;
             padding-left: 40px;
             position: relative;
             padding: 16px 0 16px 40px;
@@ -275,7 +288,7 @@
             bottom: 120px;
             right: 3px;
             z-index: -1;
-            background: url('{{ asset('images/slide63.jpg') }}') no-repeat center center/cover;
+            background: url('{{ asset('images/slide64.jpg') }}') no-repeat center center/cover;
         }
 
 
@@ -308,7 +321,7 @@
         .dsc2 .p {
             width: 40%;
             left: 60px;
-            bottom: 4%;
+            bottom: 9%;
             color: #ffffff;
             margin-top: 5%;
             position: relative;
@@ -325,11 +338,11 @@
 
         .image2 {
             width: 35%;
-            height: 85%;
-            margin-top: 5%;
+            height: 95%;
+            margin-top: 2%;
             bottom: 120px;
             right: 3px;
-            background: url('{{ asset('images/img.jpg') }}') no-repeat center center/cover;
+            background: url('{{ asset('images/img2.jpg') }}') no-repeat center center/cover;
         }
 
         .button {
@@ -345,7 +358,7 @@
             font-size: 15px;
             position: absolute;
             left: -0.3%;
-            bottom: -19px;
+            bottom: -90px;
             font-size: 17px;
         }
 
@@ -411,21 +424,21 @@
 
         }
     </style>
-    <title>MedicalMédical Pharmaceutique Medtech Biotech Cosmétique</title>
+    <title>Agroalimentaire</title>
 </head>
 
 <body>
     @include('nav')
 
     <div class="container-custom">
-        <img src="{{ asset('images/slide1.jpg') }}" alt="" class="img">
+        <img src="{{ asset('images/slide2.jpg') }}" alt="" class="img">
 
         <div class="content1">
             <div class="half1">
-                <h1>Concevoir et fabriquer des produits innovants pour <span style="color: #2A7EE2">l’industrie
-                        médicale & cosmétique</span></h1>
+                <h1>
+                    L'innovation technologique au service de <span style="color:#2A7EE2">l'agroalimentaire</span></h1>
                 <div class="cont">
-                    <h4>vous avez un <span style="color: #2A7EE2">projet</span> ?</h4>
+                    <h4>vous avez un <span style="color:#2A7EE2">projet</span> ?</h4>
                     <button>
                         <span>Contactez-nous</span>
                         <svg width="34" height="34" viewBox="0 0 74 74" fill="none"
@@ -439,27 +452,30 @@
                 </div>
             </div>
             <div class="half2">
-                <p> SOMAFIAM S.A
-                    accompagne les industriels du secteur médical, pharmaceutique, biotech, medtech et
-                    cosmétique dans leurs projets d’industrialisation, d’optimisation des process et de développement
-                    d’équipements innovants.</p>
+                <p class="p1"> SOMAFIAM S.A
+                    accompagne les acteurs de la filière agroalimentaire, de la transformation à la distribution en
+                    passant par l’emballage et la palettisation.</p>
+                <p class="p2"> Nous vous aidons à industrialiser de nouveaux produits, optimiser des process
+                    existants et
+                    concrétiser des projets d’équipements innovants.</p>
             </div>
         </div>
     </div>
 
     <div class="dsc">
         <div class="h1">
-            <h1>Des machines destinées aux salles blanches</h1>
+            <h1>Produire en maîtrisant la sécurité alimentaire</h1>
         </div>
         <div class="p">
-            <p>La fabrication de produits dans l’industrie de la santé implique l’utilisation d’équipements de
-                production adaptés à un environnement propre. Chaque équipement est conçu spécifiquement en fonction de
-                la classe ISO de la salle blanche dans laquelle il sera installé.</p>
-            <p><span style="font-weight: 600;color: #000000;">Pensées, conçues et fabriquées différemment</span> pour
-                répondre aux exigences de ce secteur d’activité, ces machines de production nécessitent un réel
-                savoir-faire. Fort d’une expérience de plus de 20 ans dans le domaine, SOMAFIAM S.A
-                est reconnu pour
-                son expertise.</p>
+            <p>La fabrication ou transformation de produits alimentaires exige une maîtrise totale de la sécurité
+                sanitaire et de la traçabilité des produits.</p>
+            <p><span style="font-weight: 600;color: #000000;">En plus d’appliquer des normes hygiéniques de plus</span>
+                en plus strictes, les acteurs de la filière sont confrontés à une évolution de la demande, aux
+                changements des habitudes alimentaires et au besoin d’informations grandissant des consommateurs.
+                Les changements climatiques et la pression sur les ressources naturelles entraînent également une
+                instabilité des prix des matières premières pouvant impacter directement la marge et perturber
+                l’approvisionnement. Face à ces défis, le secteur agroalimentaire peut compter sur les solutions de
+                pointe développées par R&D Technology.</p>
         </div>
     </div>
 
@@ -469,12 +485,14 @@
                 <h1>Notre équipe relève vos défis</h1>
                 <ul>
                     <li>Confiez-nous le développement de vos machines de production</li>
-                    <li>Concrétisez vos projets de mise sur le marché d’équipements innovants</li>
-                    <li>Optimisez vos process existants</li>
-                    <li>Renforcez vos capacités de production</li>
-                    <li>Gagnez en agilité grâce à des équipements de production multi-produits</li>
                     <li>Modernisez votre parc machines pour en faire un levier de compétitivité</li>
+                    <li>Optimisez vos process existants</li>
+                    <li>Renforcez vos capacités de production agroalimentaire</li>
+                    <li>Gagnez en agilité grâce à des équipements de production multi-produits</li>
                     <li>Profitez de notre expertise Conseil</li>
+                    <li>Augmentez la fiabilité et la disponibilité de vos équipements</li>
+                    <li>Assurez la traçabilité de vos produits</li>
+                    <li>Concrétisez vos projets de mise sur le marché d’équipements innovants</li>
                 </ul>
             </div>
         </div>
@@ -486,15 +504,15 @@
 
         <div class="p">
             <div class="h1">
-                <h1>Accompagner l’innovation médicale</h1>
+                <h1>Des solutions de pointe pour des process industriels exigeants</h1>
             </div>
-            <p>Décrits comme de réels “architectes de l’industrialisation” par nos clients, nous sommes en mesure de
-                concevoir et de fabriquer vos équipements de production tout en réduisant vos délais de mise sur le
-                marché. Pour cela, nous nous appuyons sur notre savoir-faire, mais aussi notre méthode de gestion de
-                projets et notre vaste réseau de partenaires.</p>
-            <p>Conscient des nombreuses phases de validation nécessaires et de la complexité croissante des produits de
-                la santé, notre mission consiste à vous accompagner dans vos projets les plus ambitieux et de vous faire
-                gagner en agilité.</p>
+            <p>SOMAFIAM S.A conçoit et fabrique des machines de production adaptées à votre activité agroalimentaire en
+                prenant soin d’utiliser les bons matériaux et en rendant l’équipement facilement nettoyable.</p>
+            <p>CNotre expérience associée à notre soif d’innovation nous permet de vous proposer des solutions fiables
+                et flexibles à fort TRS vous permettant de booster votre productivité.</p>
+            <p>L’industrie 4.0 contribue à relever vos challenges. De son côté, R&D Technology vous accompagne dans vos
+                projets d’automatisation en apportant de l’agilité sur les lignes de production tout en réduisant la
+                pénibilité pour vos opérateurs.</p>
             <div class="cont cont2">
                 <h4>vous avez un <span style="color: #2A7EE2">projet</span> ?</h4>
                 <button class="button">
